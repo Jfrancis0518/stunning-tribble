@@ -1,7 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-
+// save schedule locally
 function saveSchedule() {
     localStorage.setItem("schedule", JSON.stringify(schedule));
   }
@@ -10,7 +10,7 @@ function saveSchedule() {
     var textarea = event.target;
     var timeBlockId = textarea.parentNode.id;
     var eventText = textarea.value;
-  
+  // save the comments
     schedule[timeBlockId] = eventText;
     saveSchedule();
   }
